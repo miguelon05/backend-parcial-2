@@ -1,0 +1,11 @@
+spring:
+  flyway:
+    locations: classpath:db/migration/common,classpath:db/migration/h2
+  datasource:
+    url: jdbc:h2:mem:agrotest;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ''
+    driver-class-name: org.h2.Driver
+agro:
+  jwt:
+    secret: agrosierra-clave-exclusiva-para-pruebas-integracion-2026
