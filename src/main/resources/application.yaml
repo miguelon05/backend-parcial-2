@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: agro-api
+  profiles:
+    default: local
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+server:
+  port: ${PORT:8080}
+  address: ${SERVER_ADDRESS:127.0.0.1}
+agro:
+  jwt:
+    secret: ${JWT_SECRET}
+  cors-origins: ${CORS_ORIGINS:http://localhost:8081,http://localhost:3000}
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
